@@ -241,3 +241,56 @@ input:focus {
     color: #666666;
     font-size: 14px;
 }
+
+
+
+
+/* ---------- selector y buscador ---------- */
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 15px;
+    background: #ffffff;
+}
+
+.buscador {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: 520px;
+    margin-bottom: 16px;
+}
+
+.buscador input {
+    flex: 1;
+}
+
+/* ---------- etiquetas de estado ---------- */
+.etiqueta {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+}
+
+.etiqueta-activo {
+    background: #e3f4e8;
+    color: #1e6b36;
+}
+
+.etiqueta-inactivo {
+    background: #eeeeee;
+    color: #666666;
+}
+
+.btn-enlace {
+    background: none;
+    border: none;
+    padding: 0;
+    color: var(--color-principal);
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: underline;
+}

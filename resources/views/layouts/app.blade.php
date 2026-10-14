@@ -20,13 +20,14 @@
         </div>
     </header>
 
-    <nav class="menu">
-        <a href="{{ route('inicio') }}">Inicio</a>
+<nav class="menu">
+    <a href="{{ route('inicio') }}">Inicio</a>
+    <a href="{{ route('productos.index') }}">Productos</a>
 
-        @if (auth()->user()->rol->nombre === 'Administrador')
-            <a href="{{route('categorias.index') }}">Categorias</a>
-        @endif
-    </nav>        
+    @if (auth()->user()->rol->nombre === 'Administrador')
+        <a href="{{ route('categorias.index') }}">Categorías</a>
+    @endif
+</nav>        
 
     <main class="contenido">
         @if (session('exito'))
