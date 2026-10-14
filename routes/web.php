@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CategoriaController;
 
 Route::get('/', function () {
     return Auth::check() ? redirect()->route('inicio') : redirect()->route('login');
@@ -15,3 +16,7 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout')->middl
 Route::get('/inicio', function () {
     return view('inicio');
 })->name('inicio')->middleware('auth');
+
+Route::middleware(['auth', 'rol:Administrador'])->group(function() {
+    Route::resource('categorias', CategoriaController::class)->except('show');
+});

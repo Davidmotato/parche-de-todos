@@ -122,3 +122,122 @@ input:focus {
 .contenido {
     padding: 24px;
 }
+
+
+
+/* ---------- menú ---------- */
+.menu {
+    display: flex;
+    gap: 4px;
+    background: #ffffff;
+    border-bottom: 1px solid #dddddd;
+    padding: 0 24px;
+}
+
+.menu a {
+    padding: 12px 14px;
+    color: var(--color-principal);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.menu a:hover {
+    background: var(--color-fondo);
+    color: var(--color-acento);
+}
+
+/* ---------- avisos ---------- */
+.alerta {
+    padding: 12px 14px;
+    margin-bottom: 18px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.alerta-exito {
+    background: #e3f4e8;
+    color: #1e6b36;
+}
+
+.alerta-error {
+    background: #fbe5e2;
+    color: var(--color-error);
+}
+
+/* ---------- páginas con lista ---------- */
+.encabezado-pagina {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.btn-auto {
+    display: inline-block;
+    width: auto;
+    margin-top: 0;
+    padding: 9px 16px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.tabla {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    font-size: 14px;
+}
+
+.tabla th,
+.tabla td {
+    padding: 11px 14px;
+    text-align: left;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.tabla th {
+    background: var(--color-principal);
+    color: #ffffff;
+}
+
+.celda-acciones {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.enlace-accion {
+    color: var(--color-principal);
+}
+
+.btn-peligro {
+    background: none;
+    border: none;
+    padding: 0;
+    color: var(--color-error);
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* ---------- formularios internos ---------- */
+.formulario {
+    max-width: 420px;
+    margin-top: 12px;
+    padding: 24px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.acciones {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 22px;
+}
+
+.enlace-cancelar {
+    color: #666666;
+    font-size: 14px;
+}

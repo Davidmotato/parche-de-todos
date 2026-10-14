@@ -20,7 +20,23 @@
         </div>
     </header>
 
+    <nav class="menu">
+        <a href="{{ route('inicio') }}">Inicio</a>
+
+        @if (auth()->user()->rol->nombre === 'Administrador')
+            <a href="{{route('categorias.index') }}">Categorias</a>
+        @endif
+    </nav>        
+
     <main class="contenido">
+        @if (session('exito'))
+            <div class="alerta alerta-exito">{{ session('exito')}}</div>            
+        @endif
+
+        @if (session('error'))
+            <div class="alerta alerta-error">{{ session('error')}}</div>    
+        @endif
+        
         @yield('contenido')
     </main>
 </body>
