@@ -26,6 +26,8 @@
 
     @if (auth()->user()->rol->nombre === 'Administrador')
         <a href="{{ route('categorias.index') }}">Categorías</a>
+        <a href="{{ route('proveedores.index') }}">Proveedores</a>
+        <a href="{{ route('entradas.index') }}">Entradas</a>
     @endif
 </nav>        
 

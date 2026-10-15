@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\EntradaController;
+use App\Http\Controllers\ProveedorController;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Auth;
@@ -26,6 +28,13 @@ Route::middleware(['auth', 'rol:Administrador,Vendedor'])->group(function () {
 
 Route::middleware(['auth', 'rol:Administrador'])->group(function () {
     Route::resource('categorias', CategoriaController::class)->except('show');
+
+Route::resource('proveedores', ProveedorController::class)
+    ->except('show')
+    ->parameters(['proveedores' => 'proveedor']);
+    
+Route::resource('entradas', EntradaController::class)
+->only(['index', 'create', 'store', 'show']);    
 
     Route::resource('productos', ProductoController::class)->except(['index', 'show', 'destroy']);
     Route::patch('/productos/{producto}/estado', [ProductoController::class, 'cambiarEstado'])->name('productos.estado');
