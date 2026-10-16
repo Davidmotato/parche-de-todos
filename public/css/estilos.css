@@ -325,3 +325,25 @@ select {
 .alerta ul {
     margin-left: 18px;
 }
+
+
+
+/* ---------- ventas ---------- */
+.botones-comprobante {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 22px;
+}
+
+@media print {
+    .barra-superior,
+    .menu,
+    .no-imprimir {
+        display: none;
+    }
+
+    body {
+        background: #ffffff;
+    }
+}

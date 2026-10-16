@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\VentaController;
 use App\Http\Controllers\EntradaController;
 use App\Http\Controllers\ProveedorController;
 use App\Http\Controllers\ProductoController;
@@ -24,6 +25,9 @@ Route::get('/inicio', function () {
 
 Route::middleware(['auth', 'rol:Administrador,Vendedor'])->group(function () {
     Route::get('/productos', [ProductoController::class, 'index'])->name('productos.index');
+
+
+    Route::resource('ventas', VentaController::class)->only(['index', 'create', 'store', 'show']);
 });
 
 Route::middleware(['auth', 'rol:Administrador'])->group(function () {

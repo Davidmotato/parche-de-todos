@@ -22,6 +22,7 @@
 
 <nav class="menu">
     <a href="{{ route('inicio') }}">Inicio</a>
+    <a href="{{ route('ventas.index') }}">Ventas</a>
     <a href="{{ route('productos.index') }}">Productos</a>
 
     @if (auth()->user()->rol->nombre === 'Administrador')
