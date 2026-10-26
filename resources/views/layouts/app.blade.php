@@ -29,6 +29,13 @@
         <a href="{{ route('categorias.index') }}">Categorías</a>
         <a href="{{ route('proveedores.index') }}">Proveedores</a>
         <a href="{{ route('entradas.index') }}">Entradas</a>
+        <a href="{{ route('alertas.index') }}">
+            Alertas
+            @if ($alertasStock > 0)
+                <span class="insignia">{{ $alertasStock }}</span>
+                
+            @endif
+        </a>
     @endif
 </nav>        
 

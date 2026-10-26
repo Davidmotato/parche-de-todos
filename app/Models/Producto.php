@@ -30,4 +30,10 @@ class Producto extends Model
     {
         return $this->hasMany(DetalleEntrada::class, 'productos_id');
     }
+
+    public function scopeStockBajo($consulta)
+    {
+        return $consulta->where ('estado', 'activo')
+        ->whereColumn('stock', '<=', 'stock_minimo');
+    }
 }

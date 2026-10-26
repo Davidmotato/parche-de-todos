@@ -347,3 +347,47 @@ select {
         background: #ffffff;
     }
 }
+
+
+
+/* ---------- alertas de stock ---------- */
+.insignia {
+    display: inline-block;
+    min-width: 20px;
+    margin-left: 6px;
+    padding: 1px 6px;
+    border-radius: 10px;
+    background: var(--color-error);
+    color: #ffffff;
+    font-size: 12px;
+    text-align: center;
+}
+
+.panel-alerta {
+    margin-top: 18px;
+}
+
+.panel-alerta h3 {
+    margin-bottom: 10px;
+    color: var(--color-error);
+    font-size: 16px;
+}
+
+.etiqueta-agotado {
+    background: #fbe5e2;
+    color: var(--color-error);
+}
+
+.etiqueta-bajo {
+    background: #fdf0dc;
+    color: #9a5b00;
+}
+
+.mensaje-ok {
+    margin-top: 14px;
+    padding: 12px 14px;
+    background: #e3f4e8;
+    color: #1e6b36;
+    border-radius: 4px;
+    font-size: 14px;
+}
