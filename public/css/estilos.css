@@ -391,3 +391,57 @@ select {
     border-radius: 4px;
     font-size: 14px;
 }
+
+
+/* ---------- reportes ---------- */
+.pestanas {
+    display: flex;
+    gap: 4px;
+    margin: 14px 0 18px;
+    border-bottom: 2px solid #dddddd;
+}
+
+.pestanas a {
+    padding: 10px 16px;
+    color: var(--color-principal);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.pestanas a.activa {
+    margin-bottom: -2px;
+    border-bottom: 3px solid var(--color-acento);
+    font-weight: bold;
+}
+
+.filtro {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.campo-filtro label {
+    margin: 0 0 6px;
+}
+
+.campo-filtro input,
+.campo-filtro select {
+    width: auto;
+}
+
+.fila-total td {
+    background: #eef0f3;
+    font-weight: bold;
+}
+
+.nota {
+    margin-top: 12px;
+    font-size: 13px;
+    color: #666666;
+}
+
+.texto-negativo {
+    color: var(--color-error);
+}

@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\AlertaController;
 use App\Http\Controllers\InicioController;
+use App\Http\Controllers\ReporteController;
 
 Route::get('/', function () {
     return Auth::check() ? redirect()->route('inicio') : redirect()->route('login');
@@ -33,6 +34,14 @@ Route::middleware(['auth', 'rol:Administrador,Vendedor'])->group(function () {
 Route::middleware(['auth', 'rol:Administrador'])->group(function () {
     Route::resource('categorias', CategoriaController::class)->except('show');
     Route::get('/alertas', [AlertaController::class, 'index'])->name('alertas.index');
+
+Route::get('/reportes', function (){
+    return redirect()->route('reportes.ventas');
+})->name('reportes.index');
+Route::get('/reportes/ventas', [ReporteController::class, 'ventas'])->name('reportes.ventas');
+Route::get('/reportes/productos', [ReporteController::class, 'productos'])->name('reportes.productos');
+Route::get('/reportes/movimientos', [ReporteController::class, 'movimientos'])->name('reportes.movimientos');
+    
 
 Route::resource('proveedores', ProveedorController::class)
     ->except('show')
